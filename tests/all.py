@@ -515,6 +515,7 @@ with profile.test_list.group_manager(PiglitGLTest, 'shaders') as g:
 with profile.test_list.group_manager(
         PiglitGLTest, 'glx',
         require_platforms=['glx', 'mixed_glx_egl']) as g:
+    g(['glx-buffer-sharing'], run_concurrent=False)
     g(['glx-destroycontext-1'], run_concurrent=False)
     g(['glx-destroycontext-2'], run_concurrent=False)
     g(['glx-dont-care-mask'], run_concurrent=False)
